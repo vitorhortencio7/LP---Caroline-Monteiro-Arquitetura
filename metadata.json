@@ -1,0 +1,6 @@
+{
+  "name": "Caroline Monteiro Arquitetura",
+  "description": "Wireframe interativo de alta fidelidade para o site da arquiteta Caroline Monteiro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

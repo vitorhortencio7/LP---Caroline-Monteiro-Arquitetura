@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracota: #A15C4C;
+  --color-ocre: #CA8B6E;
+  --color-creme: #FAF6F0;
+  --color-bege: #EDE5D8;
+  --color-preto: #1C1C1C;
+  --color-oliva: #6B8E23;
+  --color-petroleo: #36454F;
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-poppins);
+  --font-handwriting: var(--font-caveat);
+}
+
+body {
+  background-color: var(--color-creme);
+  color: var(--color-preto);
+}
