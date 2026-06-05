@@ -1,12 +1,16 @@
-import { StaggeredMenu } from '@/components/StaggeredMenu';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Portfolio from '@/components/Portfolio';
-import Process from '@/components/Process';
-import Testimonials from '@/components/Testimonials';
-import FloatingContact from '@/components/FloatingContact';
-import Footer from '@/components/Footer';
-import SmoothScroll from '@/components/SmoothScroll';
+'use client';
+
+import dynamic from 'next/dynamic';
+
+const SmoothScroll = dynamic(() => import('@/components/SmoothScroll'), { ssr: false });
+const StaggeredMenu = dynamic(() => import('@/components/StaggeredMenu'), { ssr: false });
+const Hero = dynamic(() => import('@/components/Hero'), { ssr: false });
+const About = dynamic(() => import('@/components/About'), { ssr: false });
+const Portfolio = dynamic(() => import('@/components/Portfolio'), { ssr: false });
+const Process = dynamic(() => import('@/components/Process'), { ssr: false });
+const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
+const FloatingContact = dynamic(() => import('@/components/FloatingContact'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 const menuItems = [
   { label: 'Início', ariaLabel: 'Página inicial', link: '#' },
