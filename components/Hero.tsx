@@ -1,12 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import { useSafeReducedMotion } from '@/hooks/useSafeReducedMotion';
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useSafeReducedMotion();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -53,7 +54,7 @@ export default function Hero() {
         
         {/* Top badges & Details */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full mb-12 gap-6">
-          <div className="flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2.5">
              <span className="font-mono text-[9px] uppercase tracking-[0.25em] border border-white/20 rounded-full px-4 py-1.5 bg-black/10 backdrop-blur-sm">
                 Caroline Monteiro
              </span>
@@ -73,12 +74,12 @@ export default function Hero() {
         </div>
 
         {/* Massive Baseland-style Headline with Luxury Masking & Staggered Cadence */}
-        <div className="mb-12 overflow-hidden select-none">
+        <div className="mb-12 select-none">
           <h1 className="text-[38px] sm:text-7xl lg:text-[92px] leading-[1.08] font-serif font-light tracking-tight max-w-6xl">
             <div className="overflow-hidden block py-1.5">
               <motion.span
-                initial={shouldReduceMotion ? { opacity: 0 } : { y: "100%" }}
-                animate={shouldReduceMotion ? { opacity: 1 } : { y: 0 }}
+                initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 35 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.3, ease: [0.33, 1, 0.68, 1], delay: 0.15 }}
                 className="block"
               >
@@ -87,8 +88,8 @@ export default function Hero() {
             </div>
             <div className="overflow-hidden block py-1.5">
               <motion.span
-                initial={shouldReduceMotion ? { opacity: 0 } : { y: "100%" }}
-                animate={shouldReduceMotion ? { opacity: 1 } : { y: 0 }}
+                initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 35 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.3, ease: [0.33, 1, 0.68, 1], delay: 0.3 }}
                 className="block"
               >
@@ -127,7 +128,7 @@ export default function Hero() {
              transition={{ delay: 0.6 }}
              whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
              whileTap={{ scale: 0.98 }}
-             className="relative overflow-hidden bg-terracota text-white hover:bg-ocre transition-all duration-500 px-10 py-5 rounded-full font-medium flex items-center justify-center gap-3 shadow-2xl shrink-0 group self-stretch md:self-auto text-center"
+             className="relative overflow-hidden bg-terracota text-white hover:bg-ocre transition-all duration-500 px-8 py-4 sm:px-10 sm:py-5 rounded-full font-medium flex items-center justify-center gap-3 shadow-2xl shrink-0 group w-full max-w-[calc(100%-70px)] sm:w-auto md:self-auto self-start text-center"
            >
               <span className="relative z-10 font-medium tracking-wide text-sm flex items-center gap-2 font-mono uppercase text-xs">
                  Começar meu Projeto

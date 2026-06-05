@@ -445,8 +445,8 @@ export function StaggeredMenu({
         </div>
 
         {/* Center: Brand */}
-        <div className="sm-logo" aria-label="Logo">
-          <a href="#" className="font-serif text-lg md:text-2xl tracking-[0.1em] uppercase text-white hover:text-ocre transition-colors select-none">
+        <div className="sm-logo absolute left-1/2 -translate-x-1/2 max-w-[50%] min-[360px]:max-w-[55%] min-[400px]:max-w-[62%] sm:max-w-[70%] md:max-w-none text-center" aria-label="Logo">
+          <a href="#" className="font-serif text-[10px] min-[360px]:text-xs min-[400px]:text-sm sm:text-base md:text-xl lg:text-2xl tracking-[0.04em] min-[360px]:tracking-[0.08em] sm:tracking-[0.1em] uppercase text-white hover:text-ocre transition-all duration-300 select-none block truncate whitespace-nowrap">
             {logoText}
           </a>
         </div>

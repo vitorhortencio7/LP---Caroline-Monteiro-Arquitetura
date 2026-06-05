@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { ScrollFloat } from './ScrollFloat';
+import { useSafeReducedMotion } from '@/hooks/useSafeReducedMotion';
 
 const featuredProjects = [
   {
@@ -32,7 +33,7 @@ const categories = [
 
 export default function Portfolio() {
   const [activeIdx, setActiveIdx] = useState(0);
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useSafeReducedMotion();
 
   const handleNext = () => {
     setActiveIdx((prev) => (prev + 1) % featuredProjects.length);
@@ -46,10 +47,10 @@ export default function Portfolio() {
       
       {/* SECTION 1: Crafting Spaces, Crafting Stories (Deep Dark Featured Section) */}
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 mb-28">
-         <div className="bg-[#121110] rounded-[3rem] p-8 lg:p-14 text-white relative overflow-hidden shadow-2xl">
+         <div className="bg-[#121110] rounded-[1.8rem] xs:rounded-[2.5rem] lg:rounded-[3rem] p-5 xs:p-8 lg:p-14 text-white relative overflow-hidden shadow-2xl">
             
             {/* Header with Navigation arrows */}
-            <div className="flex justify-between items-center border-b border-white/10 pb-8 mb-10 gap-6">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-white/10 pb-6 sm:pb-8 mb-6 sm:mb-10 gap-4 sm:gap-6">
                <div>
                   <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-ocre mb-2 block font-semibold">
                      Voz das Obras

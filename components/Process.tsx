@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight, Home, Palette, Compass, Zap } from 'lucide-react';
 import { ScrollFloat } from './ScrollFloat';
+import { useSafeReducedMotion } from '@/hooks/useSafeReducedMotion';
 
 const services = [
   {
@@ -60,7 +61,7 @@ const slides = [
 
 export default function Process() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useSafeReducedMotion();
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -185,7 +186,7 @@ export default function Process() {
            whileInView={{ opacity: 1, x: 0, scale: 1 }}
            viewport={{ once: true, amount: 0.15 }}
            transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
-           className="lg:col-span-7 bg-preto rounded-[2.5rem] p-8 lg:p-12 shadow-2xl relative overflow-hidden text-creme cursor-pointer group/slider-img"
+           className="lg:col-span-7 bg-preto rounded-[1.8rem] xs:rounded-[2.5rem] p-5 xs:p-8 lg:p-12 shadow-2xl relative overflow-hidden text-creme cursor-pointer group/slider-img"
          >
             <div className="flex justify-between items-start mb-6 w-full">
                <div className="max-w-md">

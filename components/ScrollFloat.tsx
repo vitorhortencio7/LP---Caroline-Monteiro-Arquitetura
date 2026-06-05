@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, useReducedMotion, Variants } from 'motion/react';
+import { motion, useScroll, useTransform, useSpring, Variants } from 'motion/react';
+import { useSafeReducedMotion } from '@/hooks/useSafeReducedMotion';
 
 interface ScrollFloatProps {
   children: React.ReactNode;
@@ -21,7 +22,7 @@ export function ScrollFloat({
   sensitivity = 0,
 }: ScrollFloatProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useSafeReducedMotion();
   const isParallax = sensitivity > 0 && !shouldReduceMotion;
   
   const { scrollYProgress } = useScroll({
@@ -72,7 +73,7 @@ export function ScrollFloatText({
   yOffset = 30,
 }: ScrollFloatTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useSafeReducedMotion();
   const words = text.split(' ');
 
   const containerVariants: Variants = {
