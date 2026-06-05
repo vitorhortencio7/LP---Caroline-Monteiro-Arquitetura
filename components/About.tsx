@@ -23,24 +23,26 @@ export default function About() {
             </ScrollFloat>
 
             {/* Supportive Paragraph Grid - Written to Conversion & Editorial hybrid constraints */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-bege/60 pt-8 mt-4">
-               <div>
-                  <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#A15C4C] mb-3 font-semibold">
-                     O Chic é Funcionar e Ser Viável
-                  </p>
-                  <p className="text-sm font-light text-preto/70 leading-relaxed">
-                     Com 5 anos de experiência e controle rigoroso no canteiro de obras, Caroline Monteiro entende que um projeto premium só é verdadeiramente chique se for executável e respeitar seu orçamento. Em Fortaleza e Ceará, traduzimos ideias em cronogramas reais e planilhas transparentes, evitando surpresas indesejáveis.
-                  </p>
+            <ScrollFloat delay={0.25} yOffset={25}>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-bege/60 pt-8 mt-4">
+                  <div>
+                     <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#A15C4C] mb-3 font-semibold">
+                        O Chic é Funcionar e Ser Viável
+                     </p>
+                     <p className="text-sm font-light text-preto/70 leading-relaxed">
+                        Com 5 anos de experiência e controle rigoroso no canteiro de obras, Caroline Monteiro entende que um projeto premium só é verdadeiramente chique se for executável e respeitar seu orçamento. Em Fortaleza e Ceará, traduzo ideias em cronogramas reais e planilhas transparentes, evitando surpresas indesejáveis.
+                     </p>
+                  </div>
+                  <div>
+                     <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#A15C4C] mb-3 font-semibold">
+                        Luz, Vento e Alma Cearense
+                     </p>
+                     <p className="text-sm font-light text-preto/70 leading-relaxed">
+                        Projetar para a minha região exige sensibilidade climática: dominar a incidência solar, integrar a brisa litorânea constante e valorizar texturas táteis que trazem frescor e conforto térmico. Crio refúgios elegantes e acolhedores que celebram a leveza do estilo de vida local, com um olhar cosmopolita de quem vive o mundo.
+                     </p>
+                  </div>
                </div>
-               <div>
-                  <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#A15C4C] mb-3 font-semibold">
-                     Luz, Vento e Alma Cearense
-                  </p>
-                  <p className="text-sm font-light text-preto/70 leading-relaxed">
-                     Projetar para a nossa região exige sensibilidade climática: dominar a incidência solar, integrar a brisa litorânea constante e valorizar texturas táteis que trazem frescor e conforto térmico. Criamos refúgios elegantes e acolhedores que celebram a leveza do nosso estilo de vida, com um olhar cosmopolita de quem vive o mundo.
-                  </p>
-               </div>
-            </div>
+            </ScrollFloat>
          </div>
 
       </div>
@@ -59,7 +61,7 @@ export default function About() {
                <h4 className="font-serif text-2xl text-preto mb-3">Estilo de Vida Local</h4>
             </div>
             <p className="text-xs font-light text-preto/70 leading-relaxed">
-               Luz natural abundante e ventilação cruzada como pilares. Desenhamos lares frescos que abraçam a alma cearense e otimizam o seu bem-estar diário.
+               Luz natural abundante e ventilação cruzada como pilares. Desenho lares frescos que abraçam a alma cearense e otimizam o seu bem-estar diário.
             </p>
          </ScrollFloat>
 
@@ -74,7 +76,7 @@ export default function About() {
                <h4 className="font-serif text-2xl text-preto mb-3">Arquitetura Acessível</h4>
             </div>
             <p className="text-xs font-light text-preto/70 leading-relaxed">
-               Acreditamos que possuir um projeto assinado, autoral e sob medida deve ser um investimento justo e viável, sintonizado com sua realidade financeira.
+               Acredito que possuir um projeto assinado, autoral e sob medida deve ser um investimento justo e viável, sintonizado com sua realidade financeira.
             </p>
          </ScrollFloat>
 
@@ -89,7 +91,7 @@ export default function About() {
                <h4 className="font-serif text-2xl text-preto mb-3">Dominando o Canteiro</h4>
             </div>
             <p className="text-xs font-light text-preto/70 leading-relaxed">
-               Sua reforma em mãos experientes de verdade. Cuidamos das planilhas, compatibilizações técnicas e alinhamento milimétrico com os construtores.
+               Sua reforma em mãos experientes de verdade. Cuido das planilhas, compatibilizações técnicas e alinhamento milimétrico com os construtores.
             </p>
          </ScrollFloat>
 

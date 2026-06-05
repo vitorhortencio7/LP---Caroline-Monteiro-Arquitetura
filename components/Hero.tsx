@@ -32,8 +32,8 @@ export default function Hero() {
           className="w-full h-full relative"
         >
           <Image 
-            src="https://picsum.photos/seed/arch_minimalist_red/1920/1080" 
-            alt="Inspirado pela Emoção, Definido pela Excelência" 
+            src="https://plus.unsplash.com/premium_photo-1709678337824-adc29e1b6b09?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            alt="Caroline Monteiro Arquitetura" 
             fill 
             priority
             sizes="100vw"
@@ -67,7 +67,7 @@ export default function Hero() {
                 Filosofia
              </p>
              <p className="text-xs font-light text-white/70 leading-relaxed">
-                A arquitetura autoral é um investimento real. Unimos o afeto e a poesia do design ao rigor técnico do canteiro.
+                A arquitetura autoral é um investimento real. Uno o afeto e a poesia do design ao rigor técnico do canteiro.
              </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function Hero() {
                 transition={{ duration: 1.3, ease: [0.33, 1, 0.68, 1], delay: 0.15 }}
                 className="block"
               >
-                Nós projetamos para <span className="italic font-normal text-ocre">Pessoas</span>,
+                Eu projeto para <span className="italic font-normal text-ocre">Pessoas</span>,
               </motion.span>
             </div>
             <div className="overflow-hidden block py-1.5">
@@ -115,7 +115,7 @@ export default function Hero() {
            <div className="max-w-2xl flex items-center gap-4">
               <div className="w-2.5 h-2.5 rounded-full bg-terracota animate-ping shrink-0" />
               <p className="text-xs sm:text-sm font-light text-white/70 leading-relaxed">
-                 Unimos a sofisticação da arquitetura autoral com a precisão de quem domina o canteiro de obras há 5 anos. Projetos extraordinários, repletos de luz, identidade e perfeitamente viáveis para a sua realidade em Fortaleza e região.
+                 Uno a sofisticação da arquitetura autoral com a precisão de quem domina o canteiro de obras há 5 anos. Projetos extraordinários, repletos de luz, identidade e perfeitamente viáveis para a sua realidade em Fortaleza e região.
               </p>
            </div>
 

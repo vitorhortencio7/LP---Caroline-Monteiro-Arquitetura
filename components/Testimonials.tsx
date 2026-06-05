@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { ScrollFloat } from './ScrollFloat';
 
 const reviewsArea = [
   { name: 'Ana Flávia & Marcos', location: 'Casa Terracota, Cariri', text: 'A Caroline entendeu perfeitamente que queríamos um lar acolhedor, acessível e com personalidade única. A obra foi super tranquila e a presença constante dela no canteiro nos trouxe imensa economia e confiança.' },
@@ -91,22 +92,31 @@ export default function Testimonials() {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 lg:items-center relative z-10">
              
              {/* Section Title */}
-             <div className="lg:w-1/3">
-                 <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#A15C4C] block mb-3 font-semibold">
-                    Relacionamento
-                 </span>
-                 <h2 className="text-4xl lg:text-[56px] leading-[1.1] font-serif text-preto mb-6 tracking-tight">
-                    Parcerias de <span className="italic text-terracota font-normal">Confiança</span>
-                 </h2>
-                 <p className="text-preto/70 mb-8 font-light text-base leading-relaxed">
-                    Tratamos o seu espaço com o afeto que ele merece. Cada projeto resulta de escuta ativa, controle técnico rígido de materiais e profunda transparência financeira.
-                 </p>
-             </div>
+             <ScrollFloat delay={0.1} yOffset={25} className="lg:w-1/3">
+                 <div>
+                     <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#A15C4C] block mb-3 font-semibold">
+                        Relacionamento
+                     </span>
+                     <h2 className="text-4xl lg:text-[56px] leading-[1.1] font-serif text-preto mb-6 tracking-tight">
+                        Parcerias de <span className="italic text-terracota font-normal">Confiança</span>
+                     </h2>
+                     <p className="text-preto/70 mb-8 font-light text-base leading-relaxed">
+                        Trato o seu espaço com o afeto que ele merece. Cada projeto resulta de escuta ativa, controle técnico rígido de materiais e profunda transparência financeira.
+                     </p>
+                 </div>
+             </ScrollFloat>
 
              {/* Cards Grid */}
              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 {reviewsArea.map((review, i) => (
-                    <div key={i} className={`bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500 relative border border-bege/50 flex flex-col justify-between ${i === 2 ? 'md:col-span-2 md:w-3/4 md:mx-auto lg:w-2/3' : ''}`}>
+                    <motion.div 
+                       key={i} 
+                       initial={{ opacity: 0, y: 30 }}
+                       whileInView={{ opacity: 1, y: 0 }}
+                       viewport={{ once: true, margin: '-20px' }}
+                       transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: i * 0.15 }}
+                       className={`bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500 relative border border-bege/50 flex flex-col justify-between ${i === 2 ? 'md:col-span-2 md:w-3/4 md:mx-auto lg:w-2/3' : ''}`}
+                    >
                         <div className="text-7xl leading-none text-ocre font-serif absolute -top-1 left-6 opacity-20 pointer-events-none">&quot;</div>
                         
                         <div className="text-preto/80 font-light italic mb-8 relative z-10 pt-4 text-sm sm:text-base leading-relaxed">
@@ -129,7 +139,7 @@ export default function Testimonials() {
                               <p className="font-mono text-[9px] text-[#A15C4C] uppercase tracking-widest">{review.location}</p>
                            </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
              </div>
 
@@ -229,7 +239,7 @@ export default function Testimonials() {
                       animate={{ opacity: 1, y: 0 }} 
                       className="text-sm font-mono tracking-wide text-ocre text-center py-2"
                     >
-                       Mensagem enviada com sucesso! Logo entraremos em contato. ✨
+                       Mensagem enviada com sucesso! Logo entrarei em contato. ✨
                     </motion.div>
                  ) : (
                     <form onSubmit={handleSubmit} className="relative w-full pb-3 flex items-center justify-between">

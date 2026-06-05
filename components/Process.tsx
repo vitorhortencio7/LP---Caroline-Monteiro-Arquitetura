@@ -4,20 +4,21 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { ArrowLeft, ArrowRight, Home, Palette, Compass, Zap } from 'lucide-react';
+import { ScrollFloat } from './ScrollFloat';
 
 const services = [
   {
     icon: Home,
     idTag: '01 / ARQUITETURA PURA',
     title: 'Residências Autorais',
-    desc: 'Projetos completos desenvolvidos do zero absoluto. Sintonizamos seus hábitos de vida às melhores soluções bioclimáticas — tirando máximo proveito da luz e do vento locais do Ceará para criar uma casa com identidade, beleza e rigidez técnica, totalmente compatível com o seu bolso.',
+    desc: 'Projetos completos desenvolvidos do zero absoluto. Sintonizo seus hábitos de vida às melhores soluções bioclimáticas — tirando máximo proveito da luz e do vento locais do Ceará para criar uma casa com identidade, beleza e rigidez técnica, totalmente compatível com o seu bolso.',
     colorClass: 'text-terracota border-terracota/20'
   },
   {
     icon: Palette,
     idTag: '02 / DETALHES DE ALMA',
     title: 'Interiores & Reformas',
-    desc: 'Renovação estética de espaços existentes. Planejamos o layout com maestria, escolhemos materiais nobres, marcenaria inteligente, cores quentes, e iluminação acolhedora para transformar cômodos sem vida em refúgios calorosos de paz e aconchego prático.',
+    desc: 'Renovação estética de espaços existentes. Planejo o layout com maestria, escolho materiais nobres, marcenaria inteligente, cores quentes, e iluminação acolhedora para transformar cômodos sem vida em refúgios calorosos de paz e aconchego prático.',
     colorClass: 'text-ocre border-ocre/20'
   },
   {
@@ -31,7 +32,7 @@ const services = [
     icon: Zap,
     idTag: '04 / DIRECIONAMENTO RÁPIDO',
     title: 'Consultoria Express',
-    desc: 'Para quem busca transformação rápida e assertiva sem a necessidade de um projeto integral. Orientamos você pessoalmente na escolha de acabamentos, paletas de cores, iluminação adequada ou no layout do seu ambiente de forma dinâmica e descomplicada.',
+    desc: 'Para quem busca transformação rápida e assertiva sem a necessidade de um projeto integral. Oriento você pessoalmente na escolha de acabamentos, paletas de cores, iluminação adequada ou no layout do seu ambiente de forma dinâmica e descomplicada.',
     colorClass: 'text-ocre border-ocre/20'
   }
 ];
@@ -45,7 +46,7 @@ const slides = [
   },
   {
     title: 'Apartamento Itaim: Geometria Viva',
-    desc: 'Combinamos cores quentes e materiais naturais para trazer personalidade única de moda ao imóvel, transformando cada metro quadrado em expressão pura de vida.',
+    desc: 'Combino cores quentes e materiais naturais para trazer personalidade única de moda ao imóvel, transformando cada metro quadrado em expressão pura de vida.',
     tags: ['Luminotécnico', 'Estilo Autoral', 'Personalidade'],
     img: 'https://picsum.photos/seed/slide_itaim/800/500',
   },
@@ -74,19 +75,21 @@ export default function Process() {
       
       {/* 1. SERVICES GRID - Clareza de Landing Page */}
       <div className="mb-32">
-         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
-            <div>
-               <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-terracota font-semibold mb-3 block">
-                  Como Ajudamos
-               </span>
-               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-preto max-w-2xl leading-[1.12] tracking-tight">
-                  Sua jornada rumo a um espaço com <span className="italic text-terracota font-normal">significado</span>.
-               </h2>
+         <ScrollFloat delay={0.1} yOffset={20}>
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
+               <div>
+                  <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-terracota font-semibold mb-3 block">
+                     Como Ajudo
+                  </span>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-preto max-w-2xl leading-[1.12] tracking-tight">
+                     Sua jornada rumo a um espaço com <span className="italic text-terracota font-normal">significado</span>.
+                  </h2>
+               </div>
+               <p className="text-sm font-light text-preto/60 max-w-sm leading-relaxed">
+                  Elimino o desperdício financeiro e as dores de cabeça habituais em obras através de serviços estruturados para cada fase da sua jornada.
+               </p>
             </div>
-            <p className="text-sm font-light text-preto/60 max-w-sm leading-relaxed">
-               Eliminamos o desperdício financeiro e as dores de cabeça habituais em obras através de serviços estruturados para cada fase da sua jornada.
-            </p>
-         </div>
+         </ScrollFloat>
 
          {/* Grid of 4 services */}
          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -170,7 +173,7 @@ export default function Process() {
              <div>
                 <h4 className="font-serif text-lg text-preto mb-2">Pessoas & Cenários</h4>
                 <p className="text-xs font-light text-preto/70 leading-relaxed">
-                   Antes de planejar paredes, lemos as famílias, as rotinas e a insolação. Garantimos conforto térmico sob o sol e vento nordestinos, de forma limpa e otimizada.
+                   Antes de planejar paredes, leio as famílias, as rotinas e a insolação. Garanto conforto térmico sob o sol e vento nordestinos, de forma limpa e otimizada.
                 </p>
              </div>
            </div>

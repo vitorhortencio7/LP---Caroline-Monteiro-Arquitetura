@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ScrollFloat } from './ScrollFloat';
 
 const featuredProjects = [
   {
@@ -158,17 +159,19 @@ export default function Portfolio() {
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 mt-20">
          
          {/* Sub head with view-all action (Baseland Style) */}
-         <div className="flex justify-between items-end border-b border-bege pb-6 mb-12 gap-8">
-            <h3 className="text-2xl sm:text-4xl font-serif text-preto tracking-tight">
-               Desenhando o Futuro de <br className="sm:hidden" />
-               <span className="italic text-terracota font-normal">Nossos Ambientes</span>
-            </h3>
-            
-            <a href="#contato" className="border border-[#FAF8F5]/30 hover:border-[#FAF8F5] md:border-preto/30 md:hover:border-preto font-mono text-[10px] uppercase tracking-[0.2em] px-6 py-3 rounded-full transition-colors flex items-center gap-2 group whitespace-nowrap text-preto">
-               Iniciar Projeto
-               <span className="inline-block transform group-hover:translate-x-1 transition-transform">↗</span>
-            </a>
-         </div>
+         <ScrollFloat delay={0.1} yOffset={25}>
+            <div className="flex justify-between items-end border-b border-bege pb-6 mb-12 gap-8">
+               <h3 className="text-2xl sm:text-4xl font-serif text-preto tracking-tight">
+                  Desenhando o Futuro de <br className="sm:hidden" />
+                  <span className="italic text-terracota font-normal">Seus Ambientes</span>
+               </h3>
+               
+               <a href="#contato" className="border border-[#FAF8F5]/30 hover:border-[#FAF8F5] md:border-preto/30 md:hover:border-preto font-mono text-[10px] uppercase tracking-[0.2em] px-6 py-3 rounded-full transition-colors flex items-center gap-2 group whitespace-nowrap text-preto">
+                  Iniciar Projeto
+                  <span className="inline-block transform group-hover:translate-x-1 transition-transform">↗</span>
+               </a>
+            </div>
+         </ScrollFloat>
 
          {/* 4 Standing Vertical Card Columns */}
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 select-none font-sans">

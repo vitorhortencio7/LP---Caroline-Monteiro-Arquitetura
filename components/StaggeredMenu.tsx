@@ -43,7 +43,7 @@ export function StaggeredMenu({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoText = 'MONTEIRO STUDIO',
+  logoText = 'CAROLINE MONTEIRO ARQUITETURA',
   menuButtonColor = '#fff',
   openMenuButtonColor = '#fff',
   accentColor = '#CA8B6E',

@@ -38,7 +38,7 @@ export default function Footer() {
 
                <div>
                   <div className="font-mono text-[9px] text-[#A15C4C] uppercase tracking-[0.25em] mb-2 font-bold">
-                     Caroline Monteiro Studio
+                     Caroline Monteiro Arquitetura
                   </div>
                   <p className="text-xs font-light text-white/50 leading-relaxed max-w-xs">
                      Estúdio autoral focado na orquestração inteligente de ponta a ponta: do rascunho de identidade às chaves entregues.
