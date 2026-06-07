@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Mail } from 'lucide-react';
 
 export default function Footer() {
@@ -106,11 +107,33 @@ export default function Footer() {
 
          </div>
 
-         {/* Bottom row: Privacy links, Copyright */}
-         <div className="flex flex-col sm:flex-row justify-between items-center mt-10 gap-4 text-[10px] font-mono uppercase tracking-[0.15em] text-white/30">
-            <span>
+         {/* Bottom row: Privacy links, Copyright, Developer Mark */}
+         <div className="flex flex-col md:flex-row justify-between items-center mt-10 gap-6 text-[10px] font-mono uppercase tracking-[0.15em] text-white/30 border-t border-white/5 pt-8 w-full">
+            <span className="text-center md:text-left">
                Caroline Monteiro Arquitetura &copy; {new Date().getFullYear()} / Todos os direitos reservados
             </span>
+            
+            <a 
+               href="https://vitorhortencio.com.br" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="flex items-center gap-3 hover:opacity-100 transition-all group py-1 active:scale-95"
+               aria-label="Desenvolvido por VH Design"
+            >
+               <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">
+                  Desenvolvido por VH Design
+               </span>
+               <div className="relative w-12 h-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                  <Image 
+                     src="https://i.ibb.co/B5QnqfTc/Logo-VH.png" 
+                     alt="VH Design Logo" 
+                     fill
+                     className="object-contain"
+                     referrerPolicy="no-referrer"
+                  />
+               </div>
+            </a>
+
             <div className="flex gap-4">
                <a href="#" className="hover:text-white transition-colors">Termos</a>
                <span>&bull;</span>
